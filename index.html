@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2a1c24">
+  <title>Cursos de Esculturas com Balões | Ana Luiza</title>
+  <meta name="description" content="Guirlanda orgânica, arco-íris, árvore de balões e arco espiral. Aulas gravadas com Ana Luiza, 18 anos de festas. A partir de R$ 47.">
+  <meta property="og:title" content="Cursos de Esculturas com Balões | Ana Luiza">
+  <meta property="og:description" content="4 cursos online, a partir de R$ 47. Acesso imediato, certificado e garantia de 7 dias.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #faf7f4;
+      --surface: #fffdfb;
+      --ink: #2b2228;
+      --soft: #857b81;
+      --plum: #3e2734;
+      --plum-deep: #2a1c24;
+      --rose: #a8627d;
+      --acao: #157a60;
+      --acao-deep: #0e5c48;
+      --gold: #b28a52;
+      --line: rgba(42, 28, 36, 0.09);
+      --content: 1040px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "DM Sans", sans-serif;
+      font-size: 16.5px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; }
+    :focus-visible { outline: 3px solid rgba(21,122,96,.4); outline-offset: 4px; }
+    .container { width: min(100% - 40px, var(--content)); margin-inline: auto; }
+    h1, h2, h3, p { margin: 0; }
+    h1, h2, h3 {
+      font-family: "Fraunces", serif;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.08;
+      color: var(--plum-deep);
+    }
+    .eyebrow {
+      display: block;
+      margin-bottom: 22px;
+      color: var(--rose);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+    }
+    .button {
+      min-height: 54px;
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 15px 34px;
+      border-radius: 999px;
+      background: var(--acao); color: #fff;
+      font-size: 1rem; font-weight: 700;
+      text-decoration: none;
+      transition: background-color .18s ease, transform .18s ease;
+    }
+    .button:hover { background: var(--acao-deep); transform: translateY(-1px); }
+    .note { margin-top: 16px; color: var(--soft); font-size: 0.85rem; }
+
+    /* header */
+    header.site {
+      padding: 30px 0 0;
+      text-align: center;
+    }
+    .brand {
+      display: inline-block;
+      text-decoration: none;
+      font-family: "Fraunces", serif;
+      font-size: 1rem; font-weight: 600; letter-spacing: 0.22em;
+      color: var(--plum-deep);
+    }
+    .brand small {
+      display: block; margin-top: 6px;
+      font-family: "DM Sans", sans-serif;
+      font-size: 0.62rem; font-weight: 700; letter-spacing: 0.34em; text-transform: uppercase;
+      color: var(--rose);
+    }
+
+    /* hero */
+    .hero {
+      padding: 72px 0 96px;
+      text-align: center;
+    }
+    .hero h1 {
+      max-width: 17ch;
+      margin: 0 auto 26px;
+      font-size: clamp(2.5rem, 9vw, 4.7rem);
+    }
+    .hero h1 em { font-style: italic; color: var(--rose); }
+    .hero .sub {
+      max-width: 34ch;
+      margin: 0 auto 40px;
+      color: var(--soft);
+      font-size: 1.08rem;
+      line-height: 1.65;
+    }
+    .hero .meta {
+      margin-top: 22px;
+      color: var(--soft);
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+    }
+
+    section { padding: 96px 0; }
+    .sec-head { text-align: center; margin-bottom: 56px; }
+    .sec-head h2 { font-size: clamp(1.9rem, 6vw, 2.9rem); }
+    .sec-head .sub { max-width: 44ch; margin: 18px auto 0; color: var(--soft); font-size: 1rem; }
+
+    /* cursos */
+    .courses { background: var(--surface); border-top: 1px solid var(--line); }
+    .course-grid { display: grid; gap: 40px; }
+    .course {
+      text-align: center;
+    }
+    .course .media {
+      overflow: hidden;
+      border-radius: 24px;
+      aspect-ratio: 4 / 3;
+      background: linear-gradient(145deg, #efe6ea, #ece4da);
+      margin-bottom: 26px;
+    }
+    .course .media img { width: 100%; height: 100%; object-fit: cover; }
+    .course .media .ph {
+      width: 100%; height: 100%;
+      display: grid; place-items: center;
+      color: rgba(62,39,52,.28);
+    }
+    .course .media .ph svg { width: 46%; }
+    .course h3 { font-size: 1.6rem; margin-bottom: 10px; }
+    .course .desc {
+      max-width: 34ch;
+      margin: 0 auto 20px;
+      color: var(--soft);
+      font-size: 0.95rem;
+    }
+    .course .price {
+      font-family: "Fraunces", serif;
+      font-size: 1.7rem; font-weight: 500;
+      color: var(--plum-deep);
+      margin-bottom: 4px;
+    }
+    .course .parc { color: var(--soft); font-size: 0.8rem; margin-bottom: 20px; }
+    .course .button { min-height: 50px; padding: 13px 38px; font-size: 0.95rem; }
+    .badge {
+      display: inline-block;
+      margin-bottom: 12px;
+      color: var(--gold);
+      font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.22em; text-transform: uppercase;
+    }
+
+    /* combos */
+    .bundles { background: var(--paper); }
+    .tiers { max-width: 620px; margin: 0 auto; }
+    .tier {
+      display: flex; align-items: center; justify-content: space-between; gap: 18px;
+      padding: 26px 8px;
+      border-bottom: 1px solid var(--line);
+    }
+    .tier:first-child { border-top: 1px solid var(--line); }
+    .tier .nome { font-weight: 700; font-size: 1.02rem; }
+    .tier .nome small { display: block; margin-top: 3px; color: var(--soft); font-weight: 500; font-size: 0.82rem; }
+    .tier .dir { display: flex; align-items: center; gap: 18px; }
+    .tier .preco { font-family: "Fraunces", serif; font-size: 1.5rem; color: var(--plum-deep); white-space: nowrap; }
+    .tier .mini {
+      min-height: 44px; padding: 10px 22px;
+      font-size: 0.85rem;
+    }
+    .tier.kit {
+      margin-top: 34px;
+      padding: 30px 28px;
+      border: none; border-radius: 24px;
+      background: var(--plum-deep);
+      color: #f6eef2;
+      flex-wrap: wrap;
+    }
+    .tier.kit .nome { font-size: 1.15rem; }
+    .tier.kit .nome small { color: rgba(246,238,242,.66); }
+    .tier.kit .preco { color: #e8cfa4; font-size: 1.9rem; }
+    .bundle-note { margin-top: 30px; text-align: center; color: var(--soft); font-size: 0.85rem; }
+
+    /* ana */
+    .teacher { background: var(--surface); border-block: 1px solid var(--line); }
+    .teacher .inner {
+      display: grid; gap: 40px;
+      align-items: center;
+      text-align: center;
+    }
+    .teacher img.foto {
+      width: 210px; height: 210px;
+      margin: 0 auto;
+      object-fit: cover; object-position: top;
+      border-radius: 50%;
+    }
+    .teacher .ph {
+      width: 210px; height: 210px;
+      margin: 0 auto;
+      display: grid; place-items: center;
+      border-radius: 50%;
+      background: #efe6ea;
+      color: rgba(62,39,52,.3);
+    }
+    .teacher .ph svg { width: 80px; }
+    .teacher h2 { font-size: clamp(1.8rem, 5.5vw, 2.5rem); margin-bottom: 18px; }
+    .teacher .bio {
+      max-width: 46ch; margin: 0 auto 26px;
+      color: var(--soft); font-size: 1rem;
+    }
+    .teacher .quote {
+      font-family: "Fraunces", serif; font-style: italic;
+      font-size: 1.25rem; color: var(--gold);
+    }
+
+    /* incluso */
+    .included .list {
+      max-width: 560px; margin: 0 auto;
+    }
+    .included .item {
+      display: flex; align-items: baseline; gap: 16px;
+      padding: 17px 4px;
+      border-bottom: 1px solid var(--line);
+      font-size: 0.98rem;
+    }
+    .included .item:first-child { border-top: 1px solid var(--line); }
+    .included .item::before {
+      content: "·";
+      color: var(--rose);
+      flex: none;
+    }
+    .g-line {
+      max-width: 560px;
+      margin: 44px auto 0;
+      text-align: center;
+      color: var(--plum);
+      font-family: "Fraunces", serif;
+      font-size: 1.2rem;
+      line-height: 1.5;
+    }
+    .g-line small { display: block; margin-top: 8px; font-family: "DM Sans", sans-serif; font-size: 0.85rem; color: var(--soft); }
+
+    /* faq */
+    .faq { background: var(--surface); border-top: 1px solid var(--line); }
+    .faq-list { max-width: 620px; margin: 0 auto; }
+    details { border-bottom: 1px solid var(--line); }
+    details:first-of-type { border-top: 1px solid var(--line); }
+    summary {
+      cursor: pointer;
+      padding: 20px 40px 20px 4px;
+      font-weight: 700; font-size: 0.98rem;
+      list-style: none;
+      position: relative;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: "+";
+      position: absolute; right: 8px; top: 50%;
+      transform: translateY(-50%);
+      color: var(--rose);
+      font-family: "Fraunces", serif; font-size: 1.3rem;
+    }
+    details[open] summary::after { content: "−"; }
+    details p { padding: 0 4px 20px; color: var(--soft); font-size: 0.92rem; }
+
+    /* final */
+    .final {
+      padding: 110px 0 150px;
+      text-align: center;
+      background: var(--paper);
+    }
+    .final h2 { font-size: clamp(2rem, 7vw, 3.2rem); max-width: 18ch; margin: 0 auto 18px; }
+    .final h2 em { font-style: italic; color: var(--rose); }
+    .final .sub { color: var(--soft); margin-bottom: 38px; }
+
+    footer {
+      padding: 30px 20px 120px;
+      background: var(--plum-deep);
+      color: rgba(255,255,255,.42);
+      font-size: 0.72rem; line-height: 1.7; text-align: center;
+    }
+
+    .sticky {
+      position: fixed; z-index: 50;
+      left: 12px; right: 12px;
+      bottom: max(12px, env(safe-area-inset-bottom));
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      padding: 10px 10px 10px 18px;
+      border-radius: 999px;
+      background: rgba(255,253,251,.96);
+      box-shadow: 0 18px 44px rgba(42,28,36,.18);
+      border: 1px solid rgba(255,255,255,.8);
+    }
+    .sticky .p {
+      font-family: "Fraunces", serif; font-size: 1.02rem; font-weight: 600;
+      color: var(--plum-deep); line-height: 1.1;
+    }
+    .sticky .p small {
+      display: block; margin-top: 2px;
+      font-family: "DM Sans", sans-serif; font-size: 0.68rem; font-weight: 600; color: var(--soft);
+    }
+    .sticky .button { min-height: 46px; padding: 11px 26px; font-size: 0.88rem; }
+
+    @media (min-width: 720px) {
+      .course-grid { grid-template-columns: repeat(2, 1fr); gap: 56px 44px; }
+      .teacher .inner {
+        grid-template-columns: auto 1fr;
+        gap: 64px;
+        text-align: left;
+      }
+      .teacher img.foto, .teacher .ph { width: 250px; height: 250px; }
+      .teacher .bio, .teacher h2 { margin-left: 0; }
+      .teacher .bio { margin-inline: 0; }
+      .sticky {
+        left: 50%; right: auto;
+        width: min(480px, calc(100% - 40px));
+        transform: translateX(-50%);
+      }
+    }
+    @media (min-width: 1000px) {
+      .hero { padding: 110px 0 130px; }
+      section { padding: 130px 0; }
+      .sec-head { margin-bottom: 72px; }
+      .sticky { display: none; }
+      footer { padding-bottom: 40px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site">
+    <a class="brand" href="#topo">ANA LUIZA<small>Decoração de festas</small></a>
+  </header>
+
+  <section class="hero" id="topo">
+    <div class="container">
+      <h1>Cursos de esculturas <em>com balões.</em></h1>
+      <p class="sub">Guirlanda orgânica, arco-íris, árvore e arco espiral. Uma técnica completa em cada curso.</p>
+      <a class="button" href="#cursos">Escolher meu curso · a partir de R$ 47</a>
+      <p class="meta">Acesso imediato · Certificado · 1 ano de acesso · 7 dias de garantia</p>
+    </div>
+  </section>
+
+  <section class="courses" id="cursos">
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow">Os cursos</span>
+        <h2>Escolha a sua peça</h2>
+      </div>
+      <div class="course-grid">
+
+        <article class="course">
+          <div class="media">
+            <img loading="lazy" decoding="async" src="foto-guirlanda.jpg" alt="Guirlanda orgânica de balões em festa real" onerror="this.outerHTML='<div class=&quot;ph&quot;><svg viewBox=&quot;0 0 260 180&quot; fill=&quot;none&quot;><path d=&quot;M32 143C49 71 103 37 174 44c29 3 49 15 62 37&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;21&quot; stroke-linecap=&quot;round&quot; stroke-dasharray=&quot;2 28&quot;/></svg></div>'">
+          </div>
+          <h3>Guirlanda Orgânica</h3>
+          <p class="desc">A peça mais pedida: chá revelação, aniversário, eventos.</p>
+          <div class="price">R$ 97</div>
+          <div class="parc">ou 12x de R$ 9,75</div>
+          <a class="button" href="LINK_CHECKOUT_GUIRLANDA">Comprar</a>
+        </article>
+
+        <article class="course">
+          <div class="media">
+            <img loading="lazy" decoding="async" src="foto-arcoiris.jpg" alt="Arco-íris de balões pastel em festa real" onerror="this.outerHTML='<div class=&quot;ph&quot;><svg viewBox=&quot;0 0 260 180&quot; fill=&quot;none&quot;><path d=&quot;M39 145a91 91 0 0 1 182 0&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;16&quot; stroke-linecap=&quot;round&quot; stroke-dasharray=&quot;1 23&quot;/></svg></div>'">
+          </div>
+          <h3>Arco-Íris de Balões</h3>
+          <p class="desc">A peça que rende foto. E a foto traz a próxima cliente.</p>
+          <div class="price">R$ 97</div>
+          <div class="parc">ou 12x de R$ 9,75</div>
+          <a class="button" href="LINK_CHECKOUT_ARCOIRIS">Comprar</a>
+        </article>
+
+        <article class="course">
+          <div class="media">
+            <img loading="lazy" decoding="async" src="foto-arvore.jpg" alt="Árvore de balões montada no curso" onerror="this.outerHTML='<div class=&quot;ph&quot;><svg viewBox=&quot;0 0 260 180&quot; fill=&quot;none&quot;><path d=&quot;M129 146V77&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;15&quot; stroke-linecap=&quot;round&quot;/><path d=&quot;M127 78c-39 1-68-14-78-42 36-12 63-3 80 27 17-30 45-39 81-27-11 28-39 43-83 42Z&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;13&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-dasharray=&quot;1 20&quot;/></svg></div>'">
+          </div>
+          <h3>Árvore de Balões</h3>
+          <p class="desc">Peça grande, orçamento grande. De decoração a cenário.</p>
+          <div class="price">R$ 97</div>
+          <div class="parc">ou 12x de R$ 9,75</div>
+          <a class="button" href="LINK_CHECKOUT_ARVORE">Comprar</a>
+        </article>
+
+        <article class="course">
+          <div class="media">
+            <img loading="lazy" decoding="async" src="foto-espiral.jpg" alt="Arco espiral invertido montado no curso com Ana Luiza ao lado" onerror="this.outerHTML='<div class=&quot;ph&quot;><svg viewBox=&quot;0 0 300 190&quot; fill=&quot;none&quot;><g><circle cx=&quot;42&quot; cy=&quot;152&quot; r=&quot;19&quot; fill=&quot;#dbb6c6&quot;/><circle cx=&quot;95&quot; cy=&quot;122&quot; r=&quot;19&quot; fill=&quot;#dcc9a4&quot;/><circle cx=&quot;148&quot; cy=&quot;92&quot; r=&quot;20&quot; fill=&quot;#b7cabe&quot;/><circle cx=&quot;202&quot; cy=&quot;63&quot; r=&quot;19&quot; fill=&quot;#c0c1da&quot;/><circle cx=&quot;256&quot; cy=&quot;34&quot; r=&quot;19&quot; fill=&quot;#dbb6c6&quot;/></g></svg></div>'">
+          </div>
+          <span class="badge">Oferta de entrada</span>
+          <h3>Arco Espiral Invertido</h3>
+          <p class="desc">A técnica que quase ninguém monta. Seja a referência.</p>
+          <div class="price">R$ 47</div>
+          <div class="parc">ou 12x de R$ 4,73</div>
+          <a class="button" href="LINK_CHECKOUT_ESPIRAL">Comprar</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="bundles" id="combos">
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow">Descontos</span>
+        <h2>Levando mais, paga menos</h2>
+        <p class="sub">Simples assim: duas regras, sem tabela.</p>
+      </div>
+      <div class="tiers">
+        <div class="tier">
+          <div class="nome">2 ou 3 cursos<small>qualquer combinação</small></div>
+          <div class="dir">
+            <div class="preco">10% off</div>
+          </div>
+        </div>
+        <div class="tier kit">
+          <div class="nome">Kit completo<small>os 4 cursos · economia de R$ 111</small></div>
+          <div class="dir">
+            <div class="preco">R$ 227</div>
+            <a class="button mini" href="LINK_CHECKOUT_KIT">Comprar</a>
+          </div>
+        </div>
+      </div>
+      <p class="bundle-note">O desconto de 10% é aplicado automaticamente no checkout.</p>
+    </div>
+  </section>
+
+  <section class="teacher">
+    <div class="container">
+      <div class="inner">
+        <div>
+          <img class="foto" loading="lazy" decoding="async" src="foto-ana-luiza.jpg" alt="Ana Luiza" onerror="this.outerHTML='<div class=&quot;ph&quot;><svg viewBox=&quot;0 0 100 100&quot; fill=&quot;none&quot;><circle cx=&quot;50&quot; cy=&quot;35&quot; r=&quot;18&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;7&quot;/><path d=&quot;M18 88c3-22 15-34 32-34s29 12 32 34&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;7&quot; stroke-linecap=&quot;round&quot;/></svg></div>'">
+        </div>
+        <div>
+          <span class="eyebrow">Quem ensina</span>
+          <h2>Ana Luiza</h2>
+          <p class="bio">18 anos montando festas. As aulas mostram o processo real de trabalho: onde comprar, quanto usar, como montar e como dar o acabamento que segura a peça até o fim da festa.</p>
+          <p class="quote">"Ensino como eu queria ter aprendido."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="included">
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow">Você recebe</span>
+        <h2>Todo curso inclui</h2>
+      </div>
+      <div class="list">
+        <div class="item">Aulas gravadas passo a passo</div>
+        <div class="item">Lista de materiais com onde comprar</div>
+        <div class="item">Acesso imediato por e-mail, válido por 1 ano</div>
+        <div class="item">Certificado de conclusão</div>
+        <div class="item">Pagamento em até 12x no cartão</div>
+      </div>
+      <p class="g-line">7 dias de garantia. Não gostou? Devolvemos 100%.<small>Sem formulário, sem perguntas.</small></p>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow">Dúvidas</span>
+        <h2>Perguntas rápidas</h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>Nunca trabalhei com balões. Dá para acompanhar?</summary>
+          <p>Dá. A aula começa na compra do material e avança etapa por etapa.</p>
+        </details>
+        <details>
+          <summary>Como recebo o acesso?</summary>
+          <p>No seu e-mail, pela Lastlink, minutos após a confirmação do pagamento.</p>
+        </details>
+        <details>
+          <summary>Por quanto tempo tenho acesso?</summary>
+          <p>1 ano, assistindo quantas vezes quiser.</p>
+        </details>
+        <details>
+          <summary>Posso comprar um curso agora e outro depois?</summary>
+          <p>Pode. Cada curso é independente. Mas levando 2 ou 3 juntos, você ganha 10% de desconto no checkout.</p>
+        </details>
+        <details>
+          <summary>E se eu não gostar?</summary>
+          <p>7 dias de garantia. Pediu, recebeu de volta.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="container">
+      <h2>Sua próxima festa <em>paga o curso.</em></h2>
+      <p class="sub">Comece por R$ 47 ou leve os 4 por R$ 227.</p>
+      <a class="button" href="#cursos">Escolher meu curso</a>
+    </div>
+  </section>
+
+  <footer>
+    Ana Luiza Decoração de Festas · Todos os direitos reservados<br>
+    Este produto não garante resultados financeiros. Resultados variam conforme dedicação e mercado local.
+  </footer>
+
+  <div class="sticky" aria-label="Atalho para compra">
+    <div class="p">A partir de R$ 47<small>até 12x · 7 dias de garantia</small></div>
+    <a class="button" href="#cursos">Comprar</a>
+  </div>
+
+</body>
+</html>
