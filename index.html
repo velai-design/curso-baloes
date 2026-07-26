@@ -305,6 +305,12 @@
       background: rgba(255,253,251,.96);
       box-shadow: 0 18px 44px rgba(42,28,36,.18);
       border: 1px solid rgba(255,255,255,.8);
+      transition: transform .25s ease, opacity .25s ease;
+    }
+    .sticky.oculta {
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(140%);
     }
     .sticky .p {
       font-family: "Fraunces", serif; font-size: 1.02rem; font-weight: 600;
@@ -330,6 +336,7 @@
         width: min(480px, calc(100% - 40px));
         transform: translateX(-50%);
       }
+      .sticky.oculta { transform: translateX(-50%) translateY(140%); }
     }
     @media (min-width: 1000px) {
       .hero { padding: 110px 0 130px; }
@@ -497,7 +504,7 @@
     Ana Luiza Decoração de Festas · Todos os direitos reservados<br>
     Este produto não garante resultados financeiros. Resultados variam conforme dedicação e mercado local.
   </footer>
-  <div class="sticky" aria-label="Atalho para compra">
+  <div class="sticky oculta" aria-label="Atalho para compra">
     <div class="p">A partir de R$ 47<small>até 12x · 7 dias de garantia</small></div>
     <a class="button" href="#cursos" data-cta="sticky">Comprar</a>
   </div>
@@ -531,6 +538,25 @@
           gtag('event', 'clique_cta', { local: el.getAttribute('data-cta') });
         });
       });
+      /* Barra flutuante: some quando uma secao com botao de compra
+         (topo, cursos, kit ou fechamento) esta na tela. Aparece so
+         nos trechos sem botao, com transicao, e libera o conteudo. */
+      var barra = document.querySelector('.sticky');
+      if (barra && 'IntersectionObserver' in window) {
+        var comBotao = ['topo', 'cursos', 'combos', 'final'];
+        var visiveis = {};
+        var obsBarra = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { visiveis[e.target.id] = e.isIntersecting; });
+          var algum = comBotao.some(function (id) { return visiveis[id]; });
+          barra.classList.toggle('oculta', algum);
+        }, { threshold: 0 });
+        comBotao.forEach(function (id) {
+          var s = document.getElementById(id);
+          if (s) obsBarra.observe(s);
+        });
+      } else if (barra) {
+        barra.classList.remove('oculta');
+      }
       if ('IntersectionObserver' in window) {
         var vistas = {};
         var obs = new IntersectionObserver(function (entries) {
