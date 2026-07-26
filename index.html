@@ -9,6 +9,26 @@
   <meta property="og:title" content="Cursos de Esculturas com Balões | Ana Luiza">
   <meta property="og:description" content="4 cursos online, a partir de R$ 47. Acesso imediato, certificado e garantia de 7 dias.">
   <meta property="og:type" content="website">
+
+  <!-- ============================================================
+       GOOGLE ANALYTICS 4
+       Troque SOMENTE a linha abaixo pelo ID de medição da propriedade
+       (formato G-XXXXXXXXXX). Um único lugar pra editar.
+       ============================================================ -->
+  <script>
+    var GA4_ID = 'G-F772PDZB81'; /* Propriedade: Ana Luiza Cursos */
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', GA4_ID, { send_page_view: true });
+    (function(){
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;
+      document.head.appendChild(s);
+    })();
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet">
@@ -71,7 +91,6 @@
     }
     .button:hover { background: var(--acao-deep); transform: translateY(-1px); }
     .note { margin-top: 16px; color: var(--soft); font-size: 0.85rem; }
-
     /* header */
     header.site {
       padding: 30px 0 0;
@@ -90,7 +109,6 @@
       font-size: 0.62rem; font-weight: 700; letter-spacing: 0.34em; text-transform: uppercase;
       color: var(--rose);
     }
-
     /* hero */
     .hero {
       padding: 72px 0 96px;
@@ -115,12 +133,10 @@
       font-size: 0.82rem;
       letter-spacing: 0.04em;
     }
-
     section { padding: 96px 0; }
     .sec-head { text-align: center; margin-bottom: 56px; }
     .sec-head h2 { font-size: clamp(1.9rem, 6vw, 2.9rem); }
     .sec-head .sub { max-width: 44ch; margin: 18px auto 0; color: var(--soft); font-size: 1rem; }
-
     /* cursos */
     .courses { background: var(--surface); border-top: 1px solid var(--line); }
     .course-grid { display: grid; gap: 40px; }
@@ -130,7 +146,7 @@
     .course .media {
       overflow: hidden;
       border-radius: 24px;
-      aspect-ratio: 4 / 3;
+      aspect-ratio: 4 / 5;
       background: linear-gradient(145deg, #efe6ea, #ece4da);
       margin-bottom: 26px;
     }
@@ -163,37 +179,24 @@
       font-size: 0.7rem; font-weight: 700;
       letter-spacing: 0.22em; text-transform: uppercase;
     }
-
-    /* combos */
+    /* kit */
     .bundles { background: var(--paper); }
     .tiers { max-width: 620px; margin: 0 auto; }
-    .tier {
-      display: flex; align-items: center; justify-content: space-between; gap: 18px;
-      padding: 26px 8px;
-      border-bottom: 1px solid var(--line);
-    }
-    .tier:first-child { border-top: 1px solid var(--line); }
-    .tier .nome { font-weight: 700; font-size: 1.02rem; }
-    .tier .nome small { display: block; margin-top: 3px; color: var(--soft); font-weight: 500; font-size: 0.82rem; }
-    .tier .dir { display: flex; align-items: center; gap: 18px; }
-    .tier .preco { font-family: "Fraunces", serif; font-size: 1.5rem; color: var(--plum-deep); white-space: nowrap; }
-    .tier .mini {
-      min-height: 44px; padding: 10px 22px;
-      font-size: 0.85rem;
-    }
     .tier.kit {
-      margin-top: 34px;
+      display: flex; align-items: center; justify-content: space-between; gap: 18px;
       padding: 30px 28px;
-      border: none; border-radius: 24px;
+      border-radius: 24px;
       background: var(--plum-deep);
       color: #f6eef2;
       flex-wrap: wrap;
     }
-    .tier.kit .nome { font-size: 1.15rem; }
-    .tier.kit .nome small { color: rgba(246,238,242,.66); }
-    .tier.kit .preco { color: #e8cfa4; font-size: 1.9rem; }
+    .tier.kit .nome { font-weight: 700; font-size: 1.15rem; }
+    .tier.kit .nome small { display: block; margin-top: 3px; color: rgba(246,238,242,.66); font-weight: 500; font-size: 0.82rem; }
+    .tier.kit .dir { display: flex; align-items: center; gap: 18px; }
+    .tier.kit .preco { font-family: "Fraunces", serif; font-size: 1.9rem; color: #e8cfa4; white-space: nowrap; }
+    .tier.kit .preco s { display: block; font-size: 0.95rem; color: rgba(246,238,242,.5); }
+    .tier.kit .mini { min-height: 44px; padding: 10px 22px; font-size: 0.85rem; }
     .bundle-note { margin-top: 30px; text-align: center; color: var(--soft); font-size: 0.85rem; }
-
     /* ana */
     .teacher { background: var(--surface); border-block: 1px solid var(--line); }
     .teacher .inner {
@@ -225,7 +228,6 @@
       font-family: "Fraunces", serif; font-style: italic;
       font-size: 1.25rem; color: var(--gold);
     }
-
     /* incluso */
     .included .list {
       max-width: 560px; margin: 0 auto;
@@ -252,7 +254,6 @@
       line-height: 1.5;
     }
     .g-line small { display: block; margin-top: 8px; font-family: "DM Sans", sans-serif; font-size: 0.85rem; color: var(--soft); }
-
     /* faq */
     .faq { background: var(--surface); border-top: 1px solid var(--line); }
     .faq-list { max-width: 620px; margin: 0 auto; }
@@ -275,7 +276,6 @@
     }
     details[open] summary::after { content: "−"; }
     details p { padding: 0 4px 20px; color: var(--soft); font-size: 0.92rem; }
-
     /* final */
     .final {
       padding: 110px 0 150px;
@@ -285,14 +285,12 @@
     .final h2 { font-size: clamp(2rem, 7vw, 3.2rem); max-width: 18ch; margin: 0 auto 18px; }
     .final h2 em { font-style: italic; color: var(--rose); }
     .final .sub { color: var(--soft); margin-bottom: 38px; }
-
     footer {
       padding: 30px 20px 120px;
       background: var(--plum-deep);
       color: rgba(255,255,255,.42);
       font-size: 0.72rem; line-height: 1.7; text-align: center;
     }
-
     .sticky {
       position: fixed; z-index: 50;
       left: 12px; right: 12px;
@@ -313,7 +311,6 @@
       font-family: "DM Sans", sans-serif; font-size: 0.68rem; font-weight: 600; color: var(--soft);
     }
     .sticky .button { min-height: 46px; padding: 11px 26px; font-size: 0.88rem; }
-
     @media (min-width: 720px) {
       .course-grid { grid-template-columns: repeat(2, 1fr); gap: 56px 44px; }
       .teacher .inner {
@@ -344,20 +341,17 @@
   </style>
 </head>
 <body>
-
   <header class="site">
     <a class="brand" href="#topo">ANA LUIZA<small>Decoração de festas</small></a>
   </header>
-
   <section class="hero" id="topo">
     <div class="container">
       <h1>Cursos de esculturas <em>com balões.</em></h1>
       <p class="sub">Guirlanda orgânica, arco-íris, árvore e arco espiral. Uma técnica completa em cada curso.</p>
-      <a class="button" href="#cursos">Escolher meu curso · a partir de R$ 47</a>
+      <a class="button" href="#cursos" data-cta="hero">Escolher meu curso · a partir de R$ 47</a>
       <p class="meta">Acesso imediato · Certificado · 1 ano de acesso · 7 dias de garantia</p>
     </div>
   </section>
-
   <section class="courses" id="cursos">
     <div class="container">
       <div class="sec-head">
@@ -365,87 +359,74 @@
         <h2>Escolha a sua peça</h2>
       </div>
       <div class="course-grid">
-
         <article class="course">
           <div class="media">
-            <img loading="lazy" decoding="async" src="foto-guirlanda.jpg" alt="Guirlanda orgânica de balões em festa real" onerror="this.outerHTML='<div class=&quot;ph&quot;><svg viewBox=&quot;0 0 260 180&quot; fill=&quot;none&quot;><path d=&quot;M32 143C49 71 103 37 174 44c29 3 49 15 62 37&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;21&quot; stroke-linecap=&quot;round&quot; stroke-dasharray=&quot;2 28&quot;/></svg></div>'">
+            <img loading="lazy" decoding="async" src="foto-guirlanda.jpg" alt="Ana Luiza ao lado de uma guirlanda orgânica de balões montada em evento real">
           </div>
           <h3>Guirlanda Orgânica</h3>
           <p class="desc">A peça mais pedida: chá revelação, aniversário, eventos.</p>
           <div class="price">R$ 97</div>
           <div class="parc">ou 12x de R$ 9,75</div>
-          <a class="button" href="LINK_CHECKOUT_GUIRLANDA">Comprar</a>
+          <a class="button" href="https://lastlink.com/p/C90150DB7/" data-produto="Guirlanda Orgânica" data-preco="97">Comprar</a>
         </article>
-
         <article class="course">
           <div class="media">
-            <img loading="lazy" decoding="async" src="foto-arcoiris.jpg" alt="Arco-íris de balões pastel em festa real" onerror="this.outerHTML='<div class=&quot;ph&quot;><svg viewBox=&quot;0 0 260 180&quot; fill=&quot;none&quot;><path d=&quot;M39 145a91 91 0 0 1 182 0&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;16&quot; stroke-linecap=&quot;round&quot; stroke-dasharray=&quot;1 23&quot;/></svg></div>'">
+            <img loading="lazy" decoding="async" src="foto-arcoiris.jpg" alt="Arco-íris de balões pastel com nuvens brancas montado em evento real">
           </div>
           <h3>Arco-Íris de Balões</h3>
           <p class="desc">A peça que rende foto. E a foto traz a próxima cliente.</p>
           <div class="price">R$ 97</div>
           <div class="parc">ou 12x de R$ 9,75</div>
-          <a class="button" href="LINK_CHECKOUT_ARCOIRIS">Comprar</a>
+          <a class="button" href="https://lastlink.com/p/C0056FD82/" data-produto="Arco-Íris de Balões" data-preco="97">Comprar</a>
         </article>
-
         <article class="course">
           <div class="media">
-            <img loading="lazy" decoding="async" src="foto-arvore.jpg" alt="Árvore de balões montada no curso" onerror="this.outerHTML='<div class=&quot;ph&quot;><svg viewBox=&quot;0 0 260 180&quot; fill=&quot;none&quot;><path d=&quot;M129 146V77&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;15&quot; stroke-linecap=&quot;round&quot;/><path d=&quot;M127 78c-39 1-68-14-78-42 36-12 63-3 80 27 17-30 45-39 81-27-11 28-39 43-83 42Z&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;13&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-dasharray=&quot;1 20&quot;/></svg></div>'">
+            <img loading="lazy" decoding="async" src="foto-arvore.jpg" alt="Árvore de balões com copa verde e tronco marrom montada no curso">
           </div>
           <h3>Árvore de Balões</h3>
           <p class="desc">Peça grande, orçamento grande. De decoração a cenário.</p>
           <div class="price">R$ 97</div>
           <div class="parc">ou 12x de R$ 9,75</div>
-          <a class="button" href="LINK_CHECKOUT_ARVORE">Comprar</a>
+          <a class="button" href="https://lastlink.com/p/C965C444E/" data-produto="Árvore de Balões" data-preco="97">Comprar</a>
         </article>
-
         <article class="course">
           <div class="media">
-            <img loading="lazy" decoding="async" src="foto-espiral.jpg" alt="Arco espiral invertido montado no curso com Ana Luiza ao lado" onerror="this.outerHTML='<div class=&quot;ph&quot;><svg viewBox=&quot;0 0 300 190&quot; fill=&quot;none&quot;><g><circle cx=&quot;42&quot; cy=&quot;152&quot; r=&quot;19&quot; fill=&quot;#dbb6c6&quot;/><circle cx=&quot;95&quot; cy=&quot;122&quot; r=&quot;19&quot; fill=&quot;#dcc9a4&quot;/><circle cx=&quot;148&quot; cy=&quot;92&quot; r=&quot;20&quot; fill=&quot;#b7cabe&quot;/><circle cx=&quot;202&quot; cy=&quot;63&quot; r=&quot;19&quot; fill=&quot;#c0c1da&quot;/><circle cx=&quot;256&quot; cy=&quot;34&quot; r=&quot;19&quot; fill=&quot;#dbb6c6&quot;/></g></svg></div>'">
+            <img loading="lazy" decoding="async" src="foto-espiral.jpg" alt="Arco espiral de balões azuis e brancos montado no curso">
           </div>
           <span class="badge">Oferta de entrada</span>
           <h3>Arco Espiral Invertido</h3>
           <p class="desc">A técnica que quase ninguém monta. Seja a referência.</p>
           <div class="price">R$ 47</div>
           <div class="parc">ou 12x de R$ 4,73</div>
-          <a class="button" href="LINK_CHECKOUT_ESPIRAL">Comprar</a>
+          <a class="button" href="https://lastlink.com/p/CC5083805/" data-produto="Arco Espiral Invertido" data-preco="47">Comprar</a>
         </article>
-
       </div>
     </div>
   </section>
-
   <section class="bundles" id="combos">
     <div class="container">
       <div class="sec-head">
-        <span class="eyebrow">Descontos</span>
-        <h2>Levando mais, paga menos</h2>
-        <p class="sub">Simples assim: duas regras, sem tabela.</p>
+        <span class="eyebrow">Desconto</span>
+        <h2>Levando os 4, paga menos</h2>
+        <p class="sub">O desconto existe de um jeito só: kit completo com 20% off.</p>
       </div>
       <div class="tiers">
-        <div class="tier">
-          <div class="nome">2 ou 3 cursos<small>qualquer combinação</small></div>
-          <div class="dir">
-            <div class="preco">10% off</div>
-          </div>
-        </div>
         <div class="tier kit">
-          <div class="nome">Kit completo<small>os 4 cursos · economia de R$ 111</small></div>
+          <div class="nome">Kit completo<small>os 4 cursos · você economiza R$ 68</small></div>
           <div class="dir">
-            <div class="preco">R$ 227</div>
-            <a class="button mini" href="LINK_CHECKOUT_KIT">Comprar</a>
+            <div class="preco"><s>R$ 338</s>R$ 270</div>
+            <a class="button mini" href="https://lastlink.com/p/C6C701F2C/" data-produto="Kit Completo 4 Cursos" data-preco="270">Comprar</a>
           </div>
         </div>
       </div>
-      <p class="bundle-note">O desconto de 10% é aplicado automaticamente no checkout.</p>
+      <p class="bundle-note">Comprando separado, cada curso sai pelo preço cheio.</p>
     </div>
   </section>
-
-  <section class="teacher">
+  <section class="teacher" id="quem-ensina">
     <div class="container">
       <div class="inner">
         <div>
-          <img class="foto" loading="lazy" decoding="async" src="foto-ana-luiza.jpg" alt="Ana Luiza" onerror="this.outerHTML='<div class=&quot;ph&quot;><svg viewBox=&quot;0 0 100 100&quot; fill=&quot;none&quot;><circle cx=&quot;50&quot; cy=&quot;35&quot; r=&quot;18&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;7&quot;/><path d=&quot;M18 88c3-22 15-34 32-34s29 12 32 34&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;7&quot; stroke-linecap=&quot;round&quot;/></svg></div>'">
+          <img class="foto" loading="lazy" decoding="async" src="foto-ana-luiza.jpg" alt="Retrato de Ana Luiza">
         </div>
         <div>
           <span class="eyebrow">Quem ensina</span>
@@ -456,8 +437,7 @@
       </div>
     </div>
   </section>
-
-  <section class="included">
+  <section class="included" id="incluso">
     <div class="container">
       <div class="sec-head">
         <span class="eyebrow">Você recebe</span>
@@ -473,8 +453,7 @@
       <p class="g-line">7 dias de garantia. Não gostou? Devolvemos 100%.<small>Sem formulário, sem perguntas.</small></p>
     </div>
   </section>
-
-  <section class="faq">
+  <section class="faq" id="faq">
     <div class="container">
       <div class="sec-head">
         <span class="eyebrow">Dúvidas</span>
@@ -495,7 +474,7 @@
         </details>
         <details>
           <summary>Posso comprar um curso agora e outro depois?</summary>
-          <p>Pode. Cada curso é independente. Mas levando 2 ou 3 juntos, você ganha 10% de desconto no checkout.</p>
+          <p>Pode. Cada curso é independente. O desconto de 20% vale apenas no kit com os 4 cursos.</p>
         </details>
         <details>
           <summary>E se eu não gostar?</summary>
@@ -504,24 +483,68 @@
       </div>
     </div>
   </section>
-
-  <section class="final">
+  <section class="final" id="final">
     <div class="container">
       <h2>Sua próxima festa <em>paga o curso.</em></h2>
-      <p class="sub">Comece por R$ 47 ou leve os 4 por R$ 227.</p>
-      <a class="button" href="#cursos">Escolher meu curso</a>
+      <p class="sub">Comece por R$ 47 ou leve os 4 por R$ 270.</p>
+      <a class="button" href="#cursos" data-cta="final">Escolher meu curso</a>
     </div>
   </section>
-
   <footer>
     Ana Luiza Decoração de Festas · Todos os direitos reservados<br>
     Este produto não garante resultados financeiros. Resultados variam conforme dedicação e mercado local.
   </footer>
-
   <div class="sticky" aria-label="Atalho para compra">
     <div class="p">A partir de R$ 47<small>até 12x · 7 dias de garantia</small></div>
-    <a class="button" href="#cursos">Comprar</a>
+    <a class="button" href="#cursos" data-cta="sticky">Comprar</a>
   </div>
 
+  <!-- ============================================================
+       EVENTOS GA4
+       clique_comprar: cada botão de checkout, com nome e preço
+       clique_cta: botões que rolam até a lista de cursos
+       view_secao: primeira vez que cada seção entra na tela
+       Scroll de 90% e saída pra Lastlink já são medidos pelo
+       "enhanced measurement" do GA4 (deixar ativado na propriedade).
+       ============================================================ -->
+  <script>
+    (function () {
+      document.querySelectorAll('a[data-produto]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          gtag('event', 'clique_comprar', {
+            produto: el.getAttribute('data-produto'),
+            preco: Number(el.getAttribute('data-preco')),
+            destino: el.getAttribute('href')
+          });
+          gtag('event', 'begin_checkout', {
+            currency: 'BRL',
+            value: Number(el.getAttribute('data-preco')),
+            items: [{ item_name: el.getAttribute('data-produto'), price: Number(el.getAttribute('data-preco')), quantity: 1 }]
+          });
+        });
+      });
+      document.querySelectorAll('a[data-cta]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          gtag('event', 'clique_cta', { local: el.getAttribute('data-cta') });
+        });
+      });
+      if ('IntersectionObserver' in window) {
+        var vistas = {};
+        var obs = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting && !vistas[e.target.id]) {
+              vistas[e.target.id] = true;
+              gtag('event', 'view_secao', { secao: e.target.id });
+              obs.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.4 });
+        ['cursos', 'combos', 'quem-ensina', 'incluso', 'faq', 'final'].forEach(function (id) {
+          var s = document.getElementById(id);
+          if (s) obs.observe(s);
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
