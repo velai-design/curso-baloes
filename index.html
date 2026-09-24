@@ -350,6 +350,23 @@
       * { transition: none !important; }
     }
   </style>
+    <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window,document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1092353986825247');
+  fbq('track', 'PageView');
+  fbq('track', 'ViewContent', {content_name:'Cursos de Baloes - Ana Luiza', content_type:'product_group', currency:'BRL'});
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1092353986825247&ev=PageView&noscript=1"/></noscript>
+  <!-- End Meta Pixel Code -->
 </head>
 <body>
   <header class="site">
@@ -574,6 +591,37 @@
         });
       }
     })();
+  </script>
+    <!-- Meta Pixel - InitiateCheckout nos botoes de compra -->
+  <script>
+  (function () {
+    var PRODUTOS = {
+      'C90150DB7': { nome: 'Guirlanda Organica',     valor: 97.00 },
+      'C0056FD82': { nome: 'Arco-Iris de Baloes',    valor: 97.00 },
+      'C965C444E': { nome: 'Arvore de Baloes',       valor: 97.00 },
+      'CC5083805': { nome: 'Arco Espiral Invertido', valor: 47.00 },
+      'C6C701F2C': { nome: 'Kit Completo 4 Cursos',  valor: 270.00 }
+    };
+    document.addEventListener('click', function (e) {
+      var alvo = e.target;
+      if (!alvo || !alvo.closest) return;
+      var a = alvo.closest('a[href*="lastlink.com"]');
+      if (!a || typeof fbq !== 'function') return;
+      var m = a.href.match(/\/p\/([A-Za-z0-9]+)/);
+      var id = m ? m[1].toUpperCase() : null;
+      var p = (id && PRODUTOS[id]) || { nome: 'Curso de Baloes', valor: 0 };
+            var nomeDom = a.getAttribute('data-produto');
+      var precoDom = Number(a.getAttribute('data-preco'));
+      if (nomeDom) { p = { nome: nomeDom, valor: precoDom || p.valor }; }
+      fbq('track', 'InitiateCheckout', {
+        content_name: p.nome,
+        content_ids: [id || 'desconhecido'],
+        content_type: 'product',
+        value: p.valor,
+        currency: 'BRL'
+      });
+    }, true);
+  })();
   </script>
 </body>
 </html>
